@@ -24,8 +24,3 @@ suites:
     run_list:
     - role[jobscheduler-engine]
     attributes:
-  - name: zabbix
-    run_list:
-    - recipe[postgresql::server]
-    - recipe[zabbix::server]
-    attributes:
