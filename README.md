@@ -42,9 +42,9 @@ $ chef-solo -c config/solo.rb -j role/jobscheduler.rb
 * `node[:jobscheduler][:engine][:database][:port]` - JobScheduler用データベースのポート番号です。
 * `node[:jobscheduler][:engine][:database][:root_user]` - JobScheduler用データベースのRootユーザ名です。
 * `node[:jobscheduler][:engine][:database][:root_password]` - JobScheduler用データベースRootユーザのパスワードです。
-* `node[:jobscheduler][:engine][:database][:schema]` - データベース名です。
-* `node[:jobscheduler][:engine][:database][:user]` - データベース用ユーザ名です。
-* `node[:jobscheduler][:engine][:database][:password]` - データベースユーザ用のパスワードです。
+* `node[:jobscheduler][:engine][:database][:schema]` - JobScheduler用データベース名です。
+* `node[:jobscheduler][:engine][:database][:user]` - JobScheduler用データベース用ユーザ名です。
+* `node[:jobscheduler][:engine][:database][:password]` - JobScheduler用データベースユーザ用のパスワードです。
 
 Attention
 ====
