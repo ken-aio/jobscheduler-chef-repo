@@ -1,0 +1,31 @@
+---
+driver:
+#  name: vagrant
+  name: docker
+
+provisioner:
+  name: chef_solo
+  require_chef_omnibus: true
+  chef_omnibus_url: https://www.getchef.com/chef/install.sh
+  client_rb:
+    cookbook_path: 
+      - ./chef-repo/cookbooks
+      - ./chef-repo/site-cookbooks
+
+platforms:
+  - name: centos
+    dns: 8.8.8.8
+    driver_config:
+      image: centos
+      platform: rhel
+
+suites:
+  - name: js
+    run_list:
+    - role[jobscheduler-engine]
+    attributes:
+  - name: zabbix
+    run_list:
+    - recipe[postgresql::server]
+    - recipe[zabbix::server]
+    attributes:
