@@ -1,4 +1,6 @@
-簡単な説明を書きます
+What's this?
+====
+ChefでJobSchedulerをインストールすることを目的としたchef-repoです。
 
 cookbooks / site-cookbooks
 =====
