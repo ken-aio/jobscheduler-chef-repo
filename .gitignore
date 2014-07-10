@@ -3,6 +3,7 @@
 
 solo.rb
 node.json
+*.swp
 
 .rake_test_cache
 
