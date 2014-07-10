@@ -24,7 +24,8 @@ How to use
 * 以下のコマンドで動作します
 
 ```
-$ cd (your jobscheduler chef-repo root)
+$ git clone https://github.com/ken-aio/jobscheduler-chef-repo.git
+$ cd jobscheduler-chef-repo
 $ cp config/solo_example.rb solo.rb
 $ cp config/node_example.json node.json
 $ echo "solo.rb と node.jsonを環境に合わせて変更して下さい"
