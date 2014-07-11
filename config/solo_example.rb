@@ -1,5 +1,5 @@
 node_name "jobscheduler"
-cookbook_path ["/path/to/jobscheduler/cookbooks", "/path/to/jobscheduler/site-cookbooks"]
+cookbook_path ["/path/to/jobscheduler-chef-repo/cookbooks", "/path/to/jobscheduler-chef-repo/site-cookbooks"]
 role_path "/path/to/jobscheduler/roles"
 # data_bag_path ""
 # environment_path ""
