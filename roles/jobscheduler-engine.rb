@@ -7,7 +7,7 @@ override_attributes(
   "jobscheduler" => {
     "version" => {
       "major" => "1.7",
-      "minor" => "4177"
+      "minor" => "4189"
     }
   },
   "postgresql" => {
@@ -18,7 +18,8 @@ override_attributes(
       "postgres" => "postgres"
     },
     "config" => {
-      "standard_conforming_strings" => false
+      "standard_conforming_strings" => false,
+      "bytea_output" => "escape"
     },
     "pg_hba" => [
       {:type => "local", :db => "all", :user => "all", :addr => nil, :method => "trust"},

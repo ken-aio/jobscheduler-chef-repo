@@ -29,7 +29,7 @@ $ cd jobscheduler-chef-repo
 $ cp config/solo_example.rb solo.rb
 $ cp config/node_example.json node.json
 $ echo "solo.rb と node.jsonを環境に合わせて変更して下さい"
-$ chef-solo -c config/solo.rb -j config/node.json
+$ chef-solo -c solo.rb -j node.json
 ```
 
 以下のattributeが変更可能です。
