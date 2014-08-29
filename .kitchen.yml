@@ -24,3 +24,7 @@ suites:
     run_list:
     - role[jobscheduler-engine]
     attributes:
+  - name: ja
+    run_list:
+    - role[jobscheduler-agent]
+    attributes:

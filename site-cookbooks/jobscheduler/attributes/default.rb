@@ -1,6 +1,6 @@
 # common settings
-default[:jobscheduler][:version][:major] = '1.6'
-default[:jobscheduler][:version][:minor] = '4131'
+default[:jobscheduler][:version][:major] = '1.7'
+default[:jobscheduler][:version][:minor] = '4189'
 default[:jobscheduler][:download_baseurl] = 'http://download.sos-berlin.com'
 default[:jobscheduler][:user] = 'scheduler'
 default[:jobscheduler][:user_home] = '/home'
@@ -34,3 +34,16 @@ default[:jobscheduler][:engine][:database][:root_password] = nil
 default[:jobscheduler][:engine][:database][:schema] = 'scheduler'
 default[:jobscheduler][:engine][:database][:user] = 'scheduler'
 default[:jobscheduler][:engine][:database][:password] = 'scheduler'
+
+# agent install settings
+if node[:kernel][:machine] == 'x86_64'
+  default[:jobscheduler][:agent][:module_url] = "#{node[:jobscheduler][:download_baseurl]}/JobScheduler.#{node[:jobscheduler][:version][:major]}/jobscheduler_linux-x64_agent.#{node[:jobscheduler][:version][:major]}.#{node[:jobscheduler][:version][:minor]}.tar.gz"
+else
+  default[:jobscheduler][:agent][:module_url] = "#{node[:jobscheduler][:download_baseurl]}/JobScheduler.#{node[:jobscheduler][:version][:major]}/jobscheduler_linux-x86_agent.#{node[:jobscheduler][:version][:major]}.#{node[:jobscheduler][:version][:minor]}.tar.gz"
+end
+default[:jobscheduler][:agent][:scheduler_data] = "/opt/sos-berlin.com/jobscheduler"
+default[:jobscheduler][:agent][:scheduler_home] = "/home/#{node[:jobscheduler][:user]}/sos-berlin.com/jobscheduler"
+default[:jobscheduler][:agent][:server_host] = '127.0.0.1'
+default[:jobscheduler][:agent][:port] = '4444'
+default[:jobscheduler][:agent][:scheduler_id] = 'scheduler_agent'
+default[:jobscheduler][:agent][:allow_host] = '0.0.0.0'
